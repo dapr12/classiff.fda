@@ -1,4 +1,5 @@
 
+
 smoothmat<- function( fdata, rangeval ) 
 {
   
@@ -26,7 +27,9 @@ smoothmat<- function( fdata, rangeval )
         
       }
     }
+    
+    meansmooth<-apply(smoothmat,1,mean)
       
-    list(smoothdata = smoothmat, rangeval= range )
+    list(smoothdata = smoothmat, rangeval= range, mean= meansmooth )
     
 }
